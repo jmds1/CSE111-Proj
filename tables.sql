@@ -52,7 +52,7 @@ CREATE TABLE shopsNearby(
 );
 
 CREATE TABLE archived(
-    a_plants varchar(15),
+    a_name varchar(15),
     a_username varchar(10),
     a_id int not null
 );
@@ -137,7 +137,7 @@ VALUES('Plantitas', 1234, 1239),
         ('Greenery', 4321, 4231);
 
 -- --Insert Sample Data for archived
-INSERT INTO archived(a_username, a_plants, a_id)
+INSERT INTO archived(a_username, a_name, a_id)
 VALUES('jmds', 'Black Locust', 08),
         ('Eddie', 'Jade', 12),
         ('Eddie', 'Organ pipe', 02),
@@ -175,3 +175,16 @@ FROM userAccount;
 SELECT plant_name
 FROM plantInfo
 WHERE plant_type = 'Succulent';
+
+--#5 What is the environment that a rattail plant can survive in 
+SELECT plant_environment
+FROM plantInfo
+WHERE plant_name = 'Rattail';
+
+--#12 List user id of users who have logged in within 15 days and archived a Succulent plant.
+SELECT user_username
+FROM userAccount
+INNER JOIN archived ON archived.a_username = userAccount.user_username
+INNER JOIN plantInfo ON plantInfo.plant_name = archived.a_name
+WHERE user_lastLogin <= 15 AND plant_type = 'Succulent';
+
