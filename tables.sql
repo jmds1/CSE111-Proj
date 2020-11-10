@@ -60,7 +60,7 @@ CREATE TABLE archived(
 CREATE TABLE search(
     search_id int not NULL,
     search_name varchar(30),
-    search_type varchar(20),
+    --search_type varchar(20),
     search_daysAgo int not null,
     search_username varchar(10)
 );
@@ -159,8 +159,11 @@ VALUES('jmds', 'SUPER GREEN LETTUCE', 3, 5),
         ('Eddie', 'Reminds me of a ward...', 5, 2);
 
 -- --Insert Sample Data for Search
--- INSERT INTO search(search_id, search_name, search_type, search_daysAgo, search_username)
--- VALUES()
+INSERT INTO search(search_id, search_name, /*search_type,*/ search_daysAgo, search_username)
+VALUES(10, 'Whisk Fern', 2, 'marels'),
+        (21, 'Betula Nana', 1, 'Al'),
+        (10, 'Thale Cress', 2, 'marels'),
+        (10, 'Betula Nana', 2, 'marels'); 
 
 --Sample Queries
 SELECT *
