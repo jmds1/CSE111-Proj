@@ -137,8 +137,18 @@ VALUES('Plantitas', 1234, 1234),
         ('Greenery', 4321, 4321);
 
 -- --Insert Sample Data for archived
--- INSERT INTO archived(a_plants, a_username, a_id)
--- VALUE()
+INSERT INTO archived(a_username, a_plants, a_id)
+VALUES('jmds', 'Black Locust', 08),
+        ('Eddie', 'Jade', 12),
+        ('Eddie', 'Organ pipe', 02),
+        ('Ale', 'Jelly Bean', 13),
+        ('jmds', 'Chocolate Soldier', 14),
+        ('bernie', 'Beach Rose', 05),
+        ('Nells', 'Rattail', 03),
+        ('marels', 'Jade', 12),
+        ('Vero', 'San pedro', 01),
+        ('Joce', 'Ghost Plant', 15),
+        ('Al', 'Cabbage Rose', 07);
 
 -- --Insert Sample Data for post
 -- INSERT INTO post(p_username, p_caption, p_like, p_days)
