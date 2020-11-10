@@ -151,12 +151,16 @@ VALUES('jmds', 'Black Locust', 08),
         ('Al', 'Cabbage Rose', 07);
 
 -- --Insert Sample Data for post
--- INSERT INTO post(p_username, p_caption, p_like, p_days)
--- VALUE()
+INSERT INTO post(p_username, p_caption, p_like, p_days)
+VALUES('jmds', 'SUPER GREEN LETTUCE', 3, 5),
+        ('jmds', 'Green lettuce died :/', 2, 1),
+        ('Joce', 'LOOK HOW BEAUTIFUL', 6, 7),
+        ('Leah', 'Art', 1, 2),
+        ('Eddie', 'Reminds me of a ward...', 5, 2);
 
 -- --Insert Sample Data for Search
 -- INSERT INTO search(search_id, search_name, search_type, search_daysAgo, search_username)
--- VALUE()
+-- VALUES()
 
 --Sample Queries
 SELECT *
