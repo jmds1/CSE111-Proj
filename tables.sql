@@ -136,15 +136,17 @@ VALUES('Plantitas', 1234, 1234),
         ('My Little Plant shop', 1234, 1234),
         ('Greenery', 4321, 4321);
 
---Insert Sample Data for archived
-INSERT INTO archived()
+-- --Insert Sample Data for archived
+-- INSERT INTO archived(a_plants, a_username, a_id)
+-- VALUE()
 
---Insert Sample Data for post
-INSERT INTO post()
+-- --Insert Sample Data for post
+-- INSERT INTO post(p_username, p_caption, p_like, p_days)
+-- VALUE()
 
-
---Insert Sample Data for Search
-INSERT INTO search()
+-- --Insert Sample Data for Search
+-- INSERT INTO search(search_id, search_name, search_type, search_daysAgo, search_username)
+-- VALUE()
 
 --Sample Queries
 SELECT *
@@ -152,3 +154,7 @@ FROM userAccount;
 
 SELECT user_email
 FROM userAccount;
+
+SELECT plant_name
+FROM plantInfo
+WHERE plant_type = 'Succulent';
