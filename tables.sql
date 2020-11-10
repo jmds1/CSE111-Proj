@@ -98,13 +98,13 @@ VALUES(01,'Cactus', 'San pedro', 'sand', 1, 12, 'mixed', 'Hot and dry'),
 
 INSERT INTO shopsNearby(shop_name, shop_sLocation, shop_products,shop_rating)
 VALUES ('Plantitas', 1234, 'loam', 5), 
-        ('House of Plants', 1234, 'sandy', 4.5), 
-        ('Green Life', 1234, 'mixed', 3), 
-        ('The Jungle', 1234, 'sandy', 2), 
-        ('Pot Head', 1234, 'sandy', 5), 
-        ('Plantdora', 1234, 'mixed', 4), 
+        ('House of Plants', 5541, 'sandy', 4.5), 
+        ('Green Life', 4321, 'mixed', 3), 
+        ('The Jungle', 3232, 'sandy', 2), 
+        ('Pot Head', 5342, 'sandy', 5), 
+        ('Plantdora', 3012, 'mixed', 4), 
         ('My Little Plant shop', 1234, 'loam', 3.5), 
-        ('Greenery', 1234, 'sandy', 4), 
+        ('Greenery', 4321, 'sandy', 4), 
 
 --Sample Queries
 SELECT *
