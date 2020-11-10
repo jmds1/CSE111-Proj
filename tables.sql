@@ -2,11 +2,13 @@
 --CSE111
 
 CREATE TABLE userAccount(
+    user_idN int not null,
     user_username varchar(10),
     user_password varchar(100),
     user_email varchar(30),
     user_fullName varchar(35),
-    user_uLocation int not null
+    user_uLocation int not null,
+    user_lastLogin int not null
 );
 
 CREATE TABLE post(
@@ -17,16 +19,17 @@ CREATE TABLE post(
 
 CREATE TABLE plantInfo(
     plant_type varchar(20),
+    plant_name varchar(30),
     plant_soil varchar(10),
     plant_watering varchar(10),
     plant_height int not null,
-    plant_food varchar(20),
+    --plant_food varchar(20),
     plant_environment varchar(6),
-    plant_name varchar(30),
     plant_id int not null
 );
 
 CREATE TABLE plantSeason(
+    ps_name varchar(30),
     ps_spring int not null,
     ps_fall int not null,
     ps_winter int not null,
@@ -42,7 +45,8 @@ CREATE TABLE locOfShops(
 
 CREATE TABLE shopsNearby(
     shop_sLocation int not null,
-    shop_products varchar(15)
+    shop_products varchar(15),
+    shop_rating int not null
 );
 
 CREATE TABLE archived(
@@ -58,9 +62,14 @@ CREATE TABLE search(
     search_username varchar(10)
 );
 
---Insert Data
-INSERT INTO userAccount(user_username, user_password, user_email, user_fullName, user_uLocation)
-VALUES('jmds', '1234', 'jmds@gmail.com', 'Jesus Martinez', 5342);
+--Insert Sample Data
+INSERT INTO userAccount(user_idN, user_username, user_password, user_email, user_fullName, user_uLocation)
+VALUES(01, 'jmds', '1234', 'jmds@gmail.com', 'Jesus Martinez', 5342, 3);
 
+
+--Sample Queries
 SELECT *
+FROM userAccount;
+
+SELECT user_email
 FROM userAccount;
