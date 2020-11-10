@@ -14,15 +14,17 @@ FROM archived
 GROUP BY a_username
 HAVING COUNT(8) >= 2;
 
-
 --#4 A new plant has been requested by users, add it to the database.
 INSERT INTO plantInfo
     VALUES(201,'Cactus', 'Barbary fig', 'sand', 1, 7, 'mixed', 'Hot and dry');
 
---#5 Which shops are within a 50 mile radius and have at least a 3 star rating of user with id 07?
+--#5 What is the environment that a rattail plant can survive in 
+SELECT plant_environment
+FROM plantInfo
+WHERE plant_name = 'Rattail';
 
 --#6 Find which archived plants can survive in all seasons.
-SELECT a_plants 
+SELECT a_name
 FROM archived
 INNER JOIN plantSeason ON plantSeason.ps_name = archived.a_name
 WHERE ps_all = 1;
@@ -57,12 +59,12 @@ UPDATE shopsNearby
 SET shop_sLocation = shop_sLocation + 23 
 WHERE shop_name = 'The Jungle';
 
---#12 List user id of users who have logged in within 15 days and archived a succulent or cactus plant.
--- SELECT a_username
--- FROM archived
--- INNER JOIN plantInfo ON plantInfo.plant_id = archived.a_id
--- WHERE /*user_lastLogin <= 15 AND*/ plant_type = 'succulent'; --OR plant_type = 'cactus';
---********************************************
+--#12 List user id of users who have logged in within 15 days and archived a Succulent plant.
+SELECT user_username
+FROM userAccount
+INNER JOIN archived ON archived.a_username = userAccount.user_username
+INNER JOIN plantInfo ON plantInfo.plant_name = archived.a_name
+WHERE user_lastLogin <= 15 AND plant_type = 'Succulent';
 
 --#13 Find which users have made more than 3 searches in the past 5 days where at least two of them were for plants of species Vascular plant. 
 
