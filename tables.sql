@@ -94,8 +94,17 @@ VALUES(01,'Cactus', 'San pedro', 'sand', 1, 12, 'mixed', 'Hot and dry'),
         (12,'Succulent', 'Jade', 'sand', .5, 7, 'liquid', 'Sunny and dry'),
         (13,'Succulent', 'Jelly Bean', 'sand', 1, 4, 'liquid', 'Sunny and dry'),
         (14,'Succulent', 'Chocolate Soldier', 'sand', .25, 3, 'liquid', 'Sunny and dry'),
-        (15,'Succulent', 'Ghost Plant', 'sand', .25, 2, 'liquid', 'Sunny and dry')
-;
+        (15,'Succulent', 'Ghost Plant', 'sand', .25, 2, 'liquid', 'Sunny and dry');
+
+INSERT INTO shopsNearby(shop_name, shop_sLocation, shop_products,shop_rating)
+VALUES ('Plantitas', 1234, 'loam', 5), 
+        ('House of Plants', 1234, 'sandy', 4.5), 
+        ('Green Life', 1234, 'mixed', 3), 
+        ('The Jungle', 1234, 'sandy', 2), 
+        ('Pot Head', 1234, 'sandy', 5), 
+        ('Plantdora', 1234, 'mixed', 4), 
+        ('My Little Plant shop', 1234, 'loam', 3.5), 
+        ('Greenery', 1234, 'sandy', 4), 
 
 --Sample Queries
 SELECT *
