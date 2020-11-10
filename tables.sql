@@ -94,12 +94,8 @@ VALUES(01,'Cactus', 'San pedro', 'sand', 1, 12, 'mixed', 'Hot and dry'),
         (12,'Succulent', 'Jade', 'sand', .5, 7, 'liquid', 'Sunny and dry'),
         (13,'Succulent', 'Jelly Bean', 'sand', 1, 4, 'liquid', 'Sunny and dry'),
         (14,'Succulent', 'Chocolate Soldier', 'sand', .25, 3, 'liquid', 'Sunny and dry'),
-        (15,'Succulent', 'Ghost Plant', 'sand', .25, 2, 'liquid', 'Sunny and dry'),
-
-
-
+        (15,'Succulent', 'Ghost Plant', 'sand', .25, 2, 'liquid', 'Sunny and dry')
 ;
-
 
 --Sample Queries
 SELECT *
