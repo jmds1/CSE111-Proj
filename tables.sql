@@ -172,19 +172,4 @@ FROM userAccount;
 SELECT user_email
 FROM userAccount;
 
-SELECT plant_name
-FROM plantInfo
-WHERE plant_type = 'Succulent';
-
---#5 What is the environment that a rattail plant can survive in 
-SELECT plant_environment
-FROM plantInfo
-WHERE plant_name = 'Rattail';
-
---#12 List user id of users who have logged in within 15 days and archived a Succulent plant.
-SELECT user_username
-FROM userAccount
-INNER JOIN archived ON archived.a_username = userAccount.user_username
-INNER JOIN plantInfo ON plantInfo.plant_name = archived.a_name
-WHERE user_lastLogin <= 15 AND plant_type = 'Succulent';
 
