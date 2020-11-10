@@ -57,17 +57,28 @@ UPDATE shopsNearby
 SET shop_sLocation = shop_sLocation + 23 
 WHERE shop_name = 'The Jungle';
 
---#12 List user id of users who have the same locaiton, haved logged in within 15 days and archived a succulent or cactus plant.
-
+--#12 List user id of users who have logged in within 15 days and archived a succulent or cactus plant.
+-- SELECT a_username
+-- FROM archived
+-- INNER JOIN plantInfo ON plantInfo.plant_id = archived.a_id
+-- WHERE /*user_lastLogin <= 15 AND*/ plant_type = 'succulent'; --OR plant_type = 'cactus';
+--********************************************
 
 --#13 Find which users have made more than 3 searches in the past 5 days where at least two of them were for plants of species Vascular plant. 
 
 --#14 How many plants need to be watered at least 2 times per week.
+SELECT COUNT(*)
+FROM plantInfo
+WHERE plant_watering >= 2;
 
---#15 User 01 is embarred by the post they made, they want to delete all of them, make this change.user_username
-
+--#15 User jmds is embarresedd by the post they made, they want to delete all of them, make this change.user_username
+DELETE FROM post
+    WHERE p_username = 'jmds';
 --#16 The app gained popularity, we need to add 3 more users
-
+INSERT INTO userAccount
+    VALUES(20, 'chem', 'nadkdf', 'chem21@gmail.com', 'Jose Mart', 1234, 0),
+            (21, 'fatma', '12jdxsa', 'amtaf@icloud.com', 'Fatima Mart', 4200, 0),
+            (22, 'Aid', 'idk321', 'acf3@outlook.com', 'Aid FLores', 5100, 1);
 --#17 Find the tallest plant that requires soil... List the name of the plant and the name of the shops that carry that soil.
 
 --#18 The latest post of user 02 just went viral, update like number to reflect this, 1000000 likes.
