@@ -14,7 +14,8 @@ CREATE TABLE userAccount(
 CREATE TABLE post(
     p_username varchar(10),
     p_caption int not null,
-    p_like int not null
+    p_like int not null,
+    p_days int not null
 );
 
 CREATE TABLE plantInfo(
@@ -38,11 +39,13 @@ CREATE TABLE plantSeason(
 );
 
 CREATE TABLE locOfShops(
+    l_name varchar(11),
     l_uLocation int not null,
     l_sLocation int not null 
 );
 
 CREATE TABLE shopsNearby(
+    shop_name varchar(11),
     shop_sLocation int not null,
     shop_products varchar(15),
     shop_rating int not null
@@ -58,6 +61,7 @@ CREATE TABLE search(
     search_id int not NULL,
     search_name varchar(30),
     search_type varchar(20),
+    search_daysAgo int not null,
     search_username varchar(10)
 );
 
