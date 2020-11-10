@@ -147,7 +147,7 @@ VALUES('jmds', 'Black Locust', 08),
         ('Nells', 'Rattail', 03),
         ('marels', 'Jade', 12),
         ('Vero', 'San pedro', 01),
-        ('Joce', 'Ghost Plant', 15),
+        ('Joce', 'Chost Plant', 15),
         ('Al', 'Cabbage Rose', 07);
 
 -- --Insert Sample Data for post

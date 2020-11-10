@@ -1,19 +1,42 @@
 --#1 Which plants are of the species Succulent?
+SELECT plant_name
+FROM plantInfo
+WHERE plant_type = 'Succulent';
 
 --#2 How many plants of each species are there?
+SELECT plant_type, COUNT(*)
+FROM plantInfo
+GROUP BY plant_type;
 
---#3 Find which users have archived more than 2 plants?
+--#3 Find which users have archived at least 2 plants?
+SELECT a_username
+FROM archived
+GROUP BY a_username
+HAVING COUNT(8) >= 2;
+
 
 --#4 A new plant has been requested by users, add it to the database.
+INSERT INTO plantInfo
+    VALUES(201,'Cactus', 'Barbary fig', 'sand', 1, 7, 'mixed', 'Hot and dry');
 
 --#5 Which shops are within a 50 mile radius and have at least a 3 star rating of user with id 07?
 
 --#6 Find which archived plants can survive in all seasons.
+SELECT a_plants 
+FROM archived
+INNER JOIN plantSeason ON plantSeason.ps_name = archived.a_plants
+WHERE ps_all = 1;
+
 
 --#7 We want to clear up some data form the system, we want to remove all users whose last login was more than 257 days ago.
+DELETE FROM userAccount
+    WHERE user_lastLogin > 257;
 
 --#8 Find the id of plants who are above the average height of all plants
-
+SELECT plant_id
+FROM plantInfo
+WHERE plant_height > (SELECT AVG(plant_height)
+                     FROM plantInfo);
 --#9 What products does the shop closest to user 08 carry?
 
 --#10 What plants can have mixed soil and a height of less than 10?
@@ -28,7 +51,7 @@
 
 --#15 User 01 is embarred by the post they made, they want to delete all of them, make this change.user_username
 
---#16 The app gained popularity, we need to add 5 more users
+--#16 The app gained popularity, we need to add 3 more users
 
 --#17 Find the tallest plant that requires soil... List the name of the plant and the name of the shops that carry that soil.
 
