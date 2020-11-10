@@ -37,13 +37,28 @@ SELECT plant_id
 FROM plantInfo
 WHERE plant_height > (SELECT AVG(plant_height)
                      FROM plantInfo);
+
 --#9 What products does the shop closest to user 08 carry?
+SELECT shop_products, shop_sLocation
+FROM shopsNearby
+ORDER BY ABS(shop_sLocation - (SELECT user_uLocation
+                               FROM userAccount
+                               WHERE user_idN = 10))
+LIMIT 1;
 
 --#10 What plants can have mixed soil and a height of less than 10?
+SELECT plant_name
+FROM plantInfo
+WHERE plant_soil = 'mixed' AND plant_height < 10;
 
---#11 Sadly the plant shop HomeGrown had to downsize and relocated approximatley 23 miles from their last location, reflect this change.
+
+--#11 Sadly the plant shop 'The Jungle had to downsize and relocated approximatley 23 miles from their last location, reflect this change.
+UPDATE shopsNearby
+SET shop_sLocation = shop_sLocation + 23 
+WHERE shop_name = 'The Jungle';
 
 --#12 List user id of users who have the same locaiton, haved logged in within 15 days and archived a succulent or cactus plant.
+
 
 --#13 Find which users have made more than 3 searches in the past 5 days where at least two of them were for plants of species Vascular plant. 
 

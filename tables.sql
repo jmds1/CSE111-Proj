@@ -98,14 +98,14 @@ VALUES(01,'Cactus', 'San pedro', 'sand', 1, 12, 'mixed', 'Hot and dry'),
 
 --Insert Sample Data for shopsNearby
 INSERT INTO shopsNearby(shop_name, shop_sLocation, shop_products,shop_rating)
-VALUES ('Plantitas', 1234, 'loam', 5), 
-        ('House of Plants', 5541, 'sandy', 4.5), 
-        ('Green Life', 4321, 'mixed', 3), 
-        ('The Jungle', 3232, 'sandy', 2), 
-        ('Pot Head', 5342, 'sandy', 5), 
+VALUES ('Plantitas', 1239, 'loam', 5), 
+        ('House of Plants', 5567, 'sandy', 4.5), 
+        ('Green Life', 4322, 'mixed', 3), 
+        ('The Jungle', 3230, 'sandy', 2), 
+        ('Pot Head', 5290, 'sandy', 5), 
         ('Plantdora', 3012, 'mixed', 4), 
-        ('My Little Plant shop', 1234, 'loam', 3.5), 
-        ('Greenery', 4321, 'sandy', 4);
+        ('My Little Plant shop', 1243, 'loam', 3.5), 
+        ('Greenery', 4231, 'sandy', 4);
 
 --Insert Sample Data for plantSeason
 INSERT INTO plantSeason(ps_name, ps_spring, ps_fall, ps_winter, ps_summer, ps_all)
@@ -127,14 +127,14 @@ VALUES('San Pedro', 0 , 0, 0, 1, 0),
 
 --Insert Sample Data for locOfShops
 INSERT INTO locOfShops(l_name, l_uLocation, l_sLocation)
-VALUES('Plantitas', 1234, 1234),
-        ('House of Plants', 5541, 5541),
-        ('Green Life', 4321, 4321),
-        ('The Jungle', 3232, 3232),
-        ('Pot Head', 5342, 5342),
-        ('Plantdora', 3012, 3021),
-        ('My Little Plant shop', 1234, 1234),
-        ('Greenery', 4321, 4321);
+VALUES('Plantitas', 1234, 1239),
+        ('House of Plants', 5541, 5567),
+        ('Green Life', 4321, 4322),
+        ('The Jungle', 3232, 3230),
+        ('Pot Head', 5342, 5290),
+        ('Plantdora', 3012, 3012),
+        ('My Little Plant shop', 1234, 1243),
+        ('Greenery', 4321, 4231);
 
 -- --Insert Sample Data for archived
 INSERT INTO archived(a_username, a_plants, a_id)
