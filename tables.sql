@@ -89,13 +89,14 @@ VALUES(01,'Cactus', 'San pedro', 'sand', 1, 12, 'mixed', 'Hot and dry'),
         (07,'Rose', 'Cabbage Rose', 'loam', 3, 1, 'powdered', 'Sunny and moist'),
         (08,'Vascular Plant', 'Black Locust', 'mixed', 1, 2, 'none', 'Shaded and moist'),
         (09,'Vascular Plant', 'Whisk Fern', 'mixed', 2, 15, 'none', 'Shaded and moist'),
-        (10,'Vascular Plant', 'Thale cress', 'mixed', 1.5, 4, 'none', 'Shaded and moist'),
+        (10,'Vascular Plant', 'Thale Cress', 'mixed', 1.5, 4, 'none', 'Shaded and moist'),
         (11,'Vascular Plant', 'Betula Nana', 'mixed', 1, 9, 'none', 'Shaded and moist'),
         (12,'Succulent', 'Jade', 'sand', .5, 7, 'liquid', 'Sunny and dry'),
         (13,'Succulent', 'Jelly Bean', 'sand', 1, 4, 'liquid', 'Sunny and dry'),
         (14,'Succulent', 'Chocolate Soldier', 'sand', .25, 3, 'liquid', 'Sunny and dry'),
         (15,'Succulent', 'Ghost Plant', 'sand', .25, 2, 'liquid', 'Sunny and dry');
 
+--Insert Sample Data for shopsNearby
 INSERT INTO shopsNearby(shop_name, shop_sLocation, shop_products,shop_rating)
 VALUES ('Plantitas', 1234, 'loam', 5), 
         ('House of Plants', 5541, 'sandy', 4.5), 
@@ -104,7 +105,46 @@ VALUES ('Plantitas', 1234, 'loam', 5),
         ('Pot Head', 5342, 'sandy', 5), 
         ('Plantdora', 3012, 'mixed', 4), 
         ('My Little Plant shop', 1234, 'loam', 3.5), 
-        ('Greenery', 4321, 'sandy', 4), 
+        ('Greenery', 4321, 'sandy', 4);
+
+--Insert Sample Data for plantSeason
+INSERT INTO plantSeason(ps_name, ps_spring, ps_fall, ps_winter, ps_summer, ps_all)
+VALUES('San Pedro', 0 , 0, 0, 1, 0),
+        ('Organ Pipe', 0 , 0, 0, 1, 0),
+        ('Rattail', 0 , 0, 0, 1, 0),
+        ('Red Rose', 1, 1, 0, 1, 0),
+        ('Beach Rose', 1, 1, 0, 1, 0),
+        ('French Rose', 1, 1, 0, 1, 0),
+        ('Cabbage Rose', 1, 1, 0, 1, 0),
+        ('Black Locust', 1, 1, 1, 0, 0),
+        ('Whisk Fern', 1, 1, 1, 0, 0),
+        ('Thale Cress', 1, 1, 1, 0, 0),
+        ('Betula Nana', 1, 1, 1, 0, 0),
+        ('Jade', 1, 1, 1, 1, 1),
+        ('Jelly Bean', 1, 1, 1, 1, 1),
+        ('Chocolate Soldier', 1, 1, 1, 1, 1),
+        ('Chost Plant', 1, 1, 1, 1, 1);
+
+--Insert Sample Data for locOfShops
+INSERT INTO locOfShops(l_name, l_uLocation, l_sLocation)
+VALUES('Plantitas', 1234, 1234),
+        ('House of Plants', 5541, 5541),
+        ('Green Life', 4321, 4321),
+        ('The Jungle', 3232, 3232),
+        ('Pot Head', 5342, 5342),
+        ('Plantdora', 3012, 3021),
+        ('My Little Plant shop', 1234, 1234),
+        ('Greenery', 4321, 4321);
+
+--Insert Sample Data for archived
+INSERT INTO archived()
+
+--Insert Sample Data for post
+INSERT INTO post()
+
+
+--Insert Sample Data for Search
+INSERT INTO search()
 
 --Sample Queries
 SELECT *
